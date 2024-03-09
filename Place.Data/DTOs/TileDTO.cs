@@ -1,8 +1,8 @@
 ﻿namespace Place.Data;
 
-public class Cell
+public class TileDTO
 {
-    public int Id { get; set; }
+    public string Id { get; set; } = string.Empty;
     public int X { get; set; }
     public int Y { get; set; }
     public string? Color { get; set; }
