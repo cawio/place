@@ -15,4 +15,8 @@
     <ProjectReference Include="..\Place.Data\Place.Data.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Endpoints\" />
+  </ItemGroup>
+
 </Project>
