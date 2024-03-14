@@ -14,7 +14,7 @@ public class PlaceDbContext(DbContextOptions<PlaceDbContext> options) : DbContex
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.Entity<Tile>().HasData(SeedTiles(1_000_000));
+        modelBuilder.Entity<Tile>().HasData(SeedTiles(10_000));
     }
 
     private static List<Tile> SeedTiles(int count)
@@ -24,13 +24,14 @@ public class PlaceDbContext(DbContextOptions<PlaceDbContext> options) : DbContex
         {
             tiles.Add(new Tile
             {
-                Id = i,
+                Id = -(i+1),
                 X = i % 1000,
                 Y = i / 1000,
                 Color = "#FFF",
                 LastModified = DateTime.UtcNow
             });
         }
+
         return tiles;
     }
 }
